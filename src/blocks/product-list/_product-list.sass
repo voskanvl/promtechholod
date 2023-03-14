@@ -1,2 +1,12 @@
 .product-list
     margin-bottom: res-h(166px)
+
+    & .list__item
+        filter: drop-shadow(0px 0px 0px $button-color)
+        transition: filter $std-time
+
+        &:hover
+            filter: drop-shadow(1px 1px 30px $button-color)
+            & .group-item__ref
+                background: $button-color
+                color: #fff

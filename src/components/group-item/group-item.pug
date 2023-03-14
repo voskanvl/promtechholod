@@ -1,6 +1,6 @@
 mixin group-item(item)
-    .group-item 
+    a.group-item(href= item.href)
         img.group-item__image(src= item.image)
-        a.group-item__ref(href= item.href)
+        div.group-item__ref
             .group-item__name= item.name
             img(src="../../../assets/svg/arrow-left.svg")
