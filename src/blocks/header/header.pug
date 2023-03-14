@@ -1,5 +1,5 @@
 .header 
-    .header__container
+    .container.header__container
         .header__header
             .logo.header__logo 
             .credits.header__credits 
@@ -10,11 +10,12 @@
                     each i in common.jobtime
                         p= i
 
-            button.button.modal-switcher Заказать звонок
+            button.button.header__button.modal-switcher Заказать звонок
             .contacts.header__contacts
                 a(href="tel:"+common.phone.mobile)= common.phone.mobile 
                 a(href="mailto:"+common.email)= common.email
         .header__footer
+            .header__burger
             ul.header__menu.menu
                 each i in menu 
                     li.menu__item 

@@ -1,19 +1,27 @@
 .header
 
-    &__container
-        margin: 0 60px
-
     &__header
         display: flex
         align-items: center
         justify-content: space-between
-        padding-block: 33px
+        padding-block: calc(33/970*100vh)
         border-bottom: 1px solid $button-color
+        flex-wrap: wrap
+        row-gap: 1em
+
+        & > *
+            order: 3
+
+        @media (width<=470px)
+            justify-content: flex-end
+            column-gap: 1%
 
     &__credits
         display: flex
         align-items: center
         column-gap: min(31px, 1vw)
+        @media (width<=470px)
+            display: none
 
     &__contacts
         text-align: right
@@ -27,6 +35,22 @@
         position: relative
         padding-block: 20px
         border-bottom: 1px solid $button-color
+
+    &__burger
+        background: url("../../../assets/svg/Burger.svg") no-repeat
+        width: 50px
+        height: 20px
+        position: absolute
+        left: 0
+        top: 50%
+        translate: 0 -50%
+        display: none
+        @media (width <= 768px)
+            display: block
+
+    &__menu.menu
+        @media (width <= 768px)
+            display: none
 
     &__controls
         position: absolute
@@ -47,3 +71,13 @@
 
         &--cart
             background-image: url("../../../assets/images/icons/cart.png")
+
+    &__logo
+        @media (width <= 830px)
+            order: 1
+            flex-basis: 49%
+
+    &__button
+        @media (width <= 830px)
+            order: 2
+            flex-basis: 49%

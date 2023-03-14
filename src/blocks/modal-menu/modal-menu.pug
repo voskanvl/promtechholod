@@ -1,0 +1,11 @@
+.modal-menu.closed 
+    .modal-menu__container 
+        .logo.modal-menu__logo 
+        ul.modal-menu__list 
+            each i in menu 
+                li.modal-menu__item 
+                    a(href= i.href)= i.name 
+        .modal-menu__contacts 
+            a(href="tel:"+common.phone.mobile)= common.phone.mobile 
+                a(href="mailto:"+common.email)= common.email
+    .modal-menu__close

@@ -1,0 +1,74 @@
+.tizer
+
+    &__picture
+        background-image: url("../../../assets/images/tizer.png")
+        background-repeat: no-repeat
+        background-position: 100% 50%
+        position: absolute
+        top: -6px
+        left: 0
+        width: 100%
+        height: calc(945/970*100vh)
+        z-index: -1
+
+    &__container
+        position: relative
+        height: min(750px, 80vh)
+
+    &__title
+        text-indent: 2em
+        max-width: 920px
+        font-size: clamp(20px,64/1440*100vw,64px)
+        letter-spacing: -0.03em
+        font-weight: 400
+
+    &__images
+        position: absolute
+        left: 69%
+        top: 15%
+        translate: -50% 0%
+        width: min(1080px, 1080/1920*100vw)
+        height: calc(486/970*100vh)
+
+    &__image
+        background-repeat: no-repeat
+        background-size: contain
+        position: absolute
+
+        &--front
+            background-image: url("../../../assets/images/tizer/front.png")
+            width: calc(770/1920*100vw)
+            aspect-ratio: 770/272
+            right: min(377px, 377/1920*100vw)
+            top: 214px
+            left: 0
+
+        &--back
+            background-image: url("../../../assets/images/tizer/back.png")
+            width: calc(557/1920*100vw)
+            aspect-ratio: 557 / 375
+            right: 0px
+            bottom: 111px
+
+        &--group
+            background-image: url("../../../assets/images/tizer/group.png")
+            width: calc(1080/1920*100vw)
+            aspect-ratio: 1080 / 487
+            left: 38%
+            top: 21%
+            @media (width <= 1024px)
+                left: 0
+                top: 30%
+                width: 95%
+
+    &__wrap
+        position: absolute
+        top: 31.6vh
+        translate: 0 -50%
+
+        & > .row
+            column-gap: min(128px, 128/1920*100vw)
+            margin-top: 58px
+
+    &__text
+        font-weight: 400

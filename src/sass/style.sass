@@ -11,22 +11,31 @@ body
     font-family: Inter, sans-serif
     background: #E6EFF4
     color: $main-color
-    font-size: 20px
+    font-size: clamp(12px,20/1440*100vw,20px)
+    margin: 0
+    padding: 0
+
+.container
+    margin: 0 max(1em,60/1920*100vw)
 
 .button
+    font-size: clamp(12px,20/1440*100vw,20px)
     display: grid
     place-items: center
     color: #fff
     background: $button-color
-    padding: 16px 43px
+    padding: calc(16/970*100vh) calc(43/1920*100vw)
     border-radius: 30px
     border: none
-    font-size: 20px
     cursor: pointer
 
 .logo
     background-image: url("../../assets/images/logo.png")
     background-repeat: no-repeat
     background-size: 100%
-    width: min(241px, 241/1920*100vw)
+    width: min(241px, 241/768*100vw)
     aspect-ratio: 241 / 84
+
+.row
+    display: flex
+    align-items: center

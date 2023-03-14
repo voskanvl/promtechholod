@@ -1,0 +1,53 @@
+.modal-menu
+    position: fixed
+    z-index: 1000
+    inset: 0
+    background: #fff7
+    backdrop-filter: blur(6px)
+    display: grid
+    place-items: center
+    pointer-events: all
+    opacity: 1
+    transition: opacity $std-time
+
+    &__logo
+        align-self: center
+        margin-bottom: 1em
+
+    &__container
+        display: flex
+        flex-direction: column
+        row-gap: 1.5em
+
+    &__list
+        list-style: none
+        display: flex
+        flex-direction: column
+        row-gap: 0.7em
+        padding: 0
+        padding-bottom: 1em
+        border-bottom: 1px solid $button-color
+
+    &__item
+        & > a
+            text-decoration: none
+            color: $main-color
+            cursor: pointer
+
+    &__contacts a
+        display: block
+        text-decoration: none
+        color: $main-color
+        cursor: pointer
+
+    &__close
+        background: center url("../../../assets/svg/x.svg") no-repeat
+        width: 30px
+        height: 30px
+        position: absolute
+        top: 1em
+        right: 1em
+
+    &.closed
+        opacity: 0
+        pointer-events: none
