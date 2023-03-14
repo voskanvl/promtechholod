@@ -1,0 +1,7 @@
+mixin list(arr)
+    ul.list
+        each i, idx in arr 
+            li.list__item 
+                - val= i
+                - index= idx
+                block

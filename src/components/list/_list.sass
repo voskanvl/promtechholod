@@ -1,0 +1,13 @@
+.list
+    display: grid
+    grid-template-columns: repeat(4,24%)
+    gap: res-h(57px) res-w(31px)
+    list-style: none
+    padding: 0
+
+    @media (width <= 1024px)
+        grid-template-columns: repeat(3,32%)
+    @media (width <= 768px)
+        grid-template-columns: repeat(2,49%)
+    @media (width <= 425px)
+        grid-template-columns: 100%

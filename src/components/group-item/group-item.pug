@@ -1,0 +1,6 @@
+mixin group-item(item)
+    .group-item 
+        img.group-item__image(src= item.image)
+        a.group-item__ref(href= item.href)
+            .group-item__name= item.name
+            img(src="../../../assets/svg/arrow-left.svg")

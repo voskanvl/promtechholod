@@ -1,0 +1,33 @@
+groups:
+  - id: 101
+    image: "../../assets/images/catalog/1.png"
+    name: Настенные сплит-системы
+    href: "#"
+  - id: 102
+    image: "../../assets/images/catalog/2.png"
+    name: Кассетные сплит-системы
+    href: "#"
+  - id: 103
+    image: "../../assets/images/catalog/3.png"
+    name: Колонные сплит-системы
+    href: "#"
+  - id: 104
+    image: "../../assets/images/catalog/4.png"
+    name: Мультисплит-системы
+    href: "#"
+  - id: 105
+    image: "../../assets/images/catalog/5.png"
+    name: Канальные сплит-системы
+    href: "#"
+  - id: 106
+    image: "../../assets/images/catalog/6.png"
+    name: Напольно-потолочные сплит-системы
+    href: "#"
+  - id: 107
+    image: "../../assets/images/catalog/7.png"
+    name: Модели прошлых лет
+    href: "#"
+  - id: 108
+    image: "../../assets/images/catalog/8.png"
+    name: Промышленные
+    href: "#"
