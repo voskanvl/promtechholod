@@ -1,0 +1,63 @@
+.footer
+
+    &__main
+        // display: flex
+        // justify-content: space-between
+        display: grid
+        grid-template-columns: repeat(4,1fr)
+        padding-bottom: min(130px, 130/970*100vh)
+        border-bottom: 1px solid $button-color
+
+    &__block
+        display: grid
+        grid-template-rows: 70px auto
+        row-gap: 20px
+        place-items: center start
+
+        &:last-child
+            place-items: center end
+
+        &:nth-child(2)
+            place-items: center start
+
+        &:nth-child(3)
+            place-items: center center
+
+    &__menu, &__contacts
+        display: flex
+        flex-direction: column
+
+    &__menu.menu
+        padding: 0
+        margin: 0
+
+    &__contacts
+        align-items: flex-end
+
+    &__plug
+        flex-basis: 23%
+
+    &__footer
+        border-bottom: 1px solid $button-color
+        padding-bottom: min(130px, 130/970*100vh)
+
+    &__disclaimer
+        font-size: clamp(11px,15/1024*100vw,15px)
+        line-height: 18px
+        padding: 40px 49px 53px
+
+    &__contacts-title
+        place-self: center end
+
+    &__menu-title
+        place-self: center start
+
+    &__credits
+        display: flex
+        flex-direction: column
+        row-gap: 1em
+
+    &__menu
+        display: flex
+        flex-direction: column
+        row-gap: 6px
