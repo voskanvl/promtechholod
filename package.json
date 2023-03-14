@@ -1,0 +1,34 @@
+{
+    "name": "vite-standart-app",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite  --host",
+        "build": "tsc && vite build",
+        "preview": "vite preview",
+        "createComponent": " bash ./create-component.bash",
+        "tar": "tar -czvf dist.tar.gz ./dist"
+    },
+    "devDependencies": {
+        "@types/node": "^18.11.18",
+        "fast-glob": "^3.2.11",
+        "json-to-css": "^0.1.0",
+        "postcss-media-minmax": "^5.0.0",
+        "postcss-preset-env": "^7.8.3",
+        "postcss-transform-shortcut": "github:jonathantneal/postcss-transform-shortcut",
+        "sass": "^1.54.5",
+        "typescript": "^4.6.4",
+        "vite": "^4.1.2",
+        "vite-plugin-pug-transformer": "^1.0.3",
+        "vite-plugin-sass-glob-import": "^2.0.0"
+    },
+    "dependencies": {
+        "@cjting/vite-plugin-svg-sprite": "^0.2.1",
+        "@splidejs/splide": "^4.0.7",
+        "css-has-pseudo": "^4.0.2",
+        "js-yaml": "^4.1.0",
+        "ky": "^0.33.2",
+        "zustand": "^4.1.5"
+    }
+}

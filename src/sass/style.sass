@@ -1,0 +1,32 @@
+@import "@var"
+@import "./_fonts"
+@import "../components/**/*.sass"
+@import "../blocks/**/*.sass"
+
+*,*::after,*::before
+    box-sizing: border-box
+    margin: 0
+
+body
+    font-family: Inter, sans-serif
+    background: #E6EFF4
+    color: $main-color
+    font-size: 20px
+
+.button
+    display: grid
+    place-items: center
+    color: #fff
+    background: $button-color
+    padding: 16px 43px
+    border-radius: 30px
+    border: none
+    font-size: 20px
+    cursor: pointer
+
+.logo
+    background-image: url("../../assets/images/logo.png")
+    background-repeat: no-repeat
+    background-size: 100%
+    width: min(241px, 241/1920*100vw)
+    aspect-ratio: 241 / 84

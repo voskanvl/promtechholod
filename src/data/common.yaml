@@ -1,0 +1,11 @@
+common:
+  phone:
+    mobile: +7 (909) 317-75-31
+    office: +7 (8412) 54-06-20
+  email: penza-moroz@yandex.ru
+  address:
+    - г. Пенза,
+    - ул. Новый Кавказ, 4А
+  jobtime:
+    - Пн-Пт с 9:00 до 18:00, 
+    - Сб с 9:00 до 14:00

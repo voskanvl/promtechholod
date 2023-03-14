@@ -1,0 +1,11 @@
+menu:
+  - name: Главная
+    href: "#"
+  - name: Каталог
+    href: "#"
+  - name: Акции
+    href: "#"
+  - name: Доставка и оплата
+    href: "#"
+  - name: Контакты
+    href: "#"

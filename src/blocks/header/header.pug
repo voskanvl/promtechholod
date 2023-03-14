@@ -1,0 +1,24 @@
+.header 
+    .header__container
+        .header__header
+            .logo.header__logo 
+            .credits.header__credits 
+                .header__address
+                    each i in common.address
+                        p= i
+                .header__jobtime
+                    each i in common.jobtime
+                        p= i
+
+            button.button.modal-switcher Заказать звонок
+            .contacts.header__contacts
+                a(href="tel:"+common.phone.mobile)= common.phone.mobile 
+                a(href="mailto:"+common.email)= common.email
+        .header__footer
+            ul.header__menu.menu
+                each i in menu 
+                    li.menu__item 
+                        a(href= i.href)= i.name
+            .header__controls 
+                .header__control.header__control--search
+                .header__control.header__control--cart

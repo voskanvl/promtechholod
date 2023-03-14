@@ -1,0 +1,49 @@
+.header
+
+    &__container
+        margin: 0 60px
+
+    &__header
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding-block: 33px
+        border-bottom: 1px solid $button-color
+
+    &__credits
+        display: flex
+        align-items: center
+        column-gap: min(31px, 1vw)
+
+    &__contacts
+        text-align: right
+
+        & > *
+            display: block
+            color: $main-color
+            text-decoration: none
+
+    &__footer
+        position: relative
+        padding-block: 20px
+        border-bottom: 1px solid $button-color
+
+    &__controls
+        position: absolute
+        right: 0
+        display: flex
+        column-gap: 18px
+        top: 50%
+        translate: 0 -50%
+
+    &__control
+        background-repeat: no-repeat
+        background-size: contain
+        width: 25px
+        height: 26px
+
+        &--search
+            background-image: url("../../../assets/images/icons/search.png")
+
+        &--cart
+            background-image: url("../../../assets/images/icons/cart.png")
