@@ -1,0 +1,19 @@
+.block-line
+    display: flex
+    justify-content: space-between
+    padding-bottom: res-h(68px)
+    margin: 0 60px
+
+    &__left
+        flex-basis: 50%
+        & > *
+            display: inline
+
+    &__right
+        flex-basis: 20%
+
+    &__head
+        padding-left: res-w(105px)
+        font-weight: 400
+        font-size: clamp(20px,64/1920*100vw,64px)
+        letter-spacing: -0.03em

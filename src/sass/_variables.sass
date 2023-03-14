@@ -2,6 +2,13 @@ $button-color: #91C2E2
 $main-color: #484848
 
 $std-time: .6s
+$std-h: 970px
+
+@function res-h($x)
+    @return min($x, $x / $std-h * 100vh)
+
+@function res-w($x, $w: 1920px)
+    @return min($x, $x / $w * 100vh)
 
 =wid($x:1320px,$percent:95%)
     width: min($x,$percent)

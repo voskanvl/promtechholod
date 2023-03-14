@@ -1,0 +1,10 @@
+mixin block-line(number,text)
+    .block-line
+        .block-line__left
+            sup.block-line__number= number 
+            h2.block-line__head
+                block
+        .block-line__right 
+            .block-line__text!= text
+
+
