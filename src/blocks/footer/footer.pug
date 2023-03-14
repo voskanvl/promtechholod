@@ -1,31 +1,30 @@
-.footer
-    .container.footer__container 
-        .footer__main
-            .footer__block
-                .logo.footer__logo
-                .footer__credits 
-                    .footer__address
-                        each i in common.address 
-                            p= i
-                    .footer__jobtime
-                        each i in common.jobtime 
-                            p= i
-            .footer__block
-                .footer__menu-title Меню
-                ul.footer__menu.menu 
-                    each i in menu 
-                        li.menu__item 
-                            a(href= i.href)= i.name 
-            .footer__block
-                button.button.footer__button Купить кодиционер
-            .footer__block 
-                .footer__contacts-title Контакты
-                .footer__contacts 
-                    a(href="tel:"+common.phone.mobile)= common.phone.mobile
-                    a(href="tel:"+common.phone.office)= common.phone.office
-                    a(href="mailto:"+common.email)= common.email
+.container.footer__container 
+    .footer__main
+        .footer__block
+            .logo.footer__logo
+            .footer__credits 
+                .footer__address
+                    each i in common.address 
+                        p= i
+                .footer__jobtime
+                    each i in common.jobtime 
+                        p= i
+        .footer__block
+            .footer__menu-title Меню
+            ul.footer__menu.menu 
+                each i in menu 
+                    li.menu__item 
+                        a(href= i.href)= i.name 
+        .footer__block
+            button.button.footer__button Купить кодиционер
+        .footer__block 
+            .footer__contacts-title Контакты
+            .footer__contacts 
+                a(href="tel:"+common.phone.mobile)= common.phone.mobile
+                a(href="tel:"+common.phone.office)= common.phone.office
+                a(href="mailto:"+common.email)= common.email
 
-        .footer__disclaimer
-            | Обращаем ваше внимание на то, что данный сайт носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 ГК РФ. Цены на сайте
-            | приведены как справочная информация и могут быть изменены в любое время без предупреждения. Производитель может изменить комплектацию, характеристики и внешний вид товара без предварительного уведомления. 
-            | Изображения могут отличаться от действительного вида товара. Для получения подробной информации о стоимости, комплектации, сроках и условиях поставки оборудования просьба обращаться к менеджерам компании.
+    .footer__disclaimer
+        | Обращаем ваше внимание на то, что данный сайт носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 ГК РФ. Цены на сайте
+        | приведены как справочная информация и могут быть изменены в любое время без предупреждения. Производитель может изменить комплектацию, характеристики и внешний вид товара без предварительного уведомления. 
+        | Изображения могут отличаться от действительного вида товара. Для получения подробной информации о стоимости, комплектации, сроках и условиях поставки оборудования просьба обращаться к менеджерам компании.

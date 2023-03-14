@@ -1,5 +1,6 @@
 .footer
-
+    background: #fff
+    padding-top: min(63px, 63/970*100vh)
     &__main
         // display: flex
         // justify-content: space-between
@@ -7,11 +8,15 @@
         grid-template-columns: repeat(4,1fr)
         padding-bottom: min(130px, 130/970*100vh)
         border-bottom: 1px solid $button-color
+        column-gap: 1em
+        @media (width <= 768px)
+            grid-template-columns: repeat(2,1fr)
+            grid-template-rows: repeat(2,1fr)
 
     &__block
         display: grid
-        grid-template-rows: 70px auto
-        row-gap: 20px
+        grid-template-rows: min(70px, 70/970*100vh) auto
+        row-gap: min(20px, 20/970*100vh)
         place-items: center start
 
         &:last-child
@@ -22,6 +27,10 @@
 
         &:nth-child(3)
             place-items: center center
+
+        &:nth-child(n)
+            @media (width <= 768px)
+                place-items: start center
 
     &__menu, &__contacts
         display: flex
@@ -48,9 +57,13 @@
 
     &__contacts-title
         place-self: center end
+        @media (width <= 768px)
+            place-self: center
 
     &__menu-title
         place-self: center start
+        @media (width <= 768px)
+            place-self: center
 
     &__credits
         display: flex
