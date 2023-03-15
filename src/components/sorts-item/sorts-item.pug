@@ -1,5 +1,5 @@
 mixin sorts-item(item)
-    a.sorts-item(href= item.href)
+    a.sorts-item.card(href= item.href)
         .sorts-item__title= item.title 
         .sorts-item__text= item.text 
         .sorts-item__id= item.sortid.toString().padStart(2,"0") 

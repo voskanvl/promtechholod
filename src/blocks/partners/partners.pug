@@ -1,0 +1,10 @@
+include ../../components/list/list.pug
+include ../../components/partner-item/partner-item.pug
+include ../../components/block-line/block-line.pug
+
++block-line("05/",'Компания "ПРОМТЕХХОЛОД" ответственно подходит к выбору поставщиков оборудования')
+    | Наши партнеры
+.partners 
+    .container.partners__container
+        +list(partners)
+            +partner-item(val)

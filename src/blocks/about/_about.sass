@@ -1,0 +1,38 @@
+.about
+    margin-bottom: res-h(153px)
+    &__container
+        display: grid
+        grid-template-columns: repeat(4,24%)
+        gap: res-h(30px) res-w(30px)
+        @media (width <= 1024px)
+            grid-template-columns: repeat(2,49%)
+        @media (width <= 500px)
+            grid-template-columns: 100%
+
+    & .card
+        background: #fff
+
+    &__left
+        height: res-h(324px)
+    &__middle
+        height: res-h(518px)
+
+    &__right
+        display: flex
+        align-items: center
+        grid-column: 3 / -1
+
+        @media (width <= 1024px)
+            grid-column: 1 / -1
+
+    &__20
+        font-weight: 500
+        font-size: 250px
+        line-height: 112.52%
+        letter-spacing: -0.015em
+        color: rgba(145, 194, 226, 0.3)
+
+    &__text
+        margin-left: -4em
+        @media (width <= 500px)
+            margin-left: -25em

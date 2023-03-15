@@ -4,22 +4,20 @@ include ../components/block-line/block-line.pug
 block header
     include ../blocks/header/header.pug
 block main 
+
     include ../blocks/tizer/tizer.pug
 
-    +block-line("01/","Ниже представлен каталог с актуальными ценами")
-        | Каталог товаров
     include ../blocks/product-list/product-list.pug
 
-    +block-line("02/","ПромТехХолод - это большой выбор климатического оборудования.")
-        | Разновидности кондиционеров
     include ../blocks/sorts/sorts.pug
 
-    +block-line("03/","Климатическое оборудование используется в помещениях различного вида использования")
-        | Широкий спектр применения оборудования
     include ../blocks/specter/specter.pug
 
     include ../blocks/middle/middle.pug
 
+    include ../blocks/about/about.pug
+
+    include ../blocks/partners/partners.pug
 
 block footer
     include ../blocks/footer/footer.pug

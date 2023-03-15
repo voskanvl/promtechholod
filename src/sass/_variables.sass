@@ -8,7 +8,7 @@ $std-h: 970px
     @return min($x, $x / $std-h * 100vh)
 
 @function res-w($x, $w: 1920px)
-    @return min($x, $x / $w * 100vh)
+    @return min($x, $x / $w * 100vw)
 
 =wid($x:1320px,$percent:95%)
     width: min($x,$percent)
