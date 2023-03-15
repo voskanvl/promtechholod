@@ -16,7 +16,7 @@
     &__text
         width: 85%
         margin: 0 auto
-        height: 45%
+        height: 65%
         overflow: auto
         scrollbar-width: thin
         &::-webkit-scrollbar
@@ -28,13 +28,30 @@
     &__id
         background: #fff
         border-radius: 50%
-        width: 58px
+        width: clamp(30px,58/1024*100vw,58px)
         aspect-ratio: 1
         position: absolute
         right: 16px
         bottom: 18px
         display: grid
         place-items: center
+        z-index: 2
+        &::after
+            content: ""
+            background: #fff
+            border-radius: 50%
+            width: clamp(30px,58/1024*100vw,58px)
+            aspect-ratio: 1
+            position: absolute
+            z-index: -1
+        &::before
+            content: ""
+            background: #E2E2E2
+            border-radius: 50%
+            width: clamp(40px,58/1024*100vw,78px)
+            aspect-ratio: 1
+            position: absolute
+            z-index: -2
 
     &__back
         position: absolute
@@ -43,7 +60,8 @@
         display: grid
         place-items: center
         opacity: 0
-        transition: $std-time
+        transition: opacity $std-time .1s
+        z-index: -1
 
     &__wrap
         display: flex
@@ -53,3 +71,7 @@
 
     &:hover > .sorts-item__back
         opacity: 1
+        z-index: 3
+        @media (width <= 1024px)
+            opacity: 0
+            z-index: -1

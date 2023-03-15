@@ -14,6 +14,10 @@ body
     font-size: clamp(11px,20/1440*100vw,20px)
     margin: 0
     padding: 0
+    @media (width <= 768px)
+        color: darken($main-color, 20% )
+    @media (width <= 500px)
+        color: #000
 
 .container
     margin: 0 max(1em,60/1920*100vw)
