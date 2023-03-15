@@ -1,0 +1,17 @@
+specter:
+  - id: 301
+    src: "../../assets/images/specter/1.jpg"
+    name: Операционные
+    href: "#"
+  - id: 302
+    src: "../../assets/images/specter/2.jpg"
+    name: Салон самолета
+    href: "#"
+  - id: 303
+    src: "../../assets/images/specter/3.jpg"
+    name: Вагон метро
+    href: "#"
+  - id: 304
+    src: "../../assets/images/specter/4.jpg"
+    name: Аудитории
+    href: "#"
