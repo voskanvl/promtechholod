@@ -2,6 +2,8 @@ include ../../components/block-line/block-line.pug
 
 .middle 
     img.middle__back(src="../../../assets/images/tizer.png")
+    img.middle__image.middle__image--left(src="../../../assets/images/cond.png")
+    img.middle__image.middle__image--right(src="../../../assets/images/cond.png")
     +block-line("04/","")
         | Скидка 10% на установку сплит-системы в квартире или частном доме
     form(action="") 
@@ -9,5 +11,3 @@ include ../../components/block-line/block-line.pug
         .middle__input
             input.middle__phone#phone(type="tel" name="phone" placeholder="+7 000 000 00 00")
             button.button.middle__button Оформить заявку
-    img.middle__image.middle__image--left(src="../../../assets/images/cond.png")
-    img.middle__image.middle__image--right(src="../../../assets/images/cond.png")
