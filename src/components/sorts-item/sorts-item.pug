@@ -1,0 +1,10 @@
+mixin sorts-item(item)
+    a.sorts-item(href= item.href)
+        .sorts-item__title= item.title 
+        .sorts-item__text= item.text 
+        .sorts-item__id= item.sortid.toString().padStart(2,"0") 
+        .sorts-item__back 
+            div
+                .sorts-item__wrap 
+                    p Приобрести кондиционер по акции
+                    img(src="../../../assets/svg/arrow-left.svg")

@@ -1,0 +1,21 @@
+sorts:
+  - id: 201
+    sortid: 1
+    title: Снижение температуры воздуха внутри помещения
+    text: Наиболее широко кондиционеры используются для снижения температуры воздуха внутри помещений в жаркое время года и круглогодично в помещениях
+    href: "#"
+  - id: 202
+    sortid: 2
+    title: Увлажнение воздуха внутри помещения
+    text: Сложные установки кондиционирования снабжены механизмами очистки воздуха от загрязняющих частиц, притока свежего воздуха, обогащения воздуха кислородом и другими функциями, повышающими качество воздуха.
+    href: "#"
+  - id: 203
+    sortid: 3
+    title: Minim esse qui esse velit elit est est anim aliqua.
+    text: Dolor amet et eiusmod eu officia et. Sint mollit commodo reprehenderit minim sint qui ipsum anim cupidatat esse. Amet eiusmod tempor deserunt non aute do id laborum do sunt proident laborum commodo. Nostrud tempor ipsum est velit irure veniam. Adipisicing eiusmod ex sunt ad velit ad velit pariatur fugiat eiusmod est. Commodo veniam nulla veniam cupidatat consequat amet ex deserunt.
+    href: "#"
+  - id: 204
+    sortid: 4
+    title: Повышение температуры воздуха внутри помещения
+    text: Кондиционеры с функцией теплового насоса наряду с охлаждением позволяют повышать температуру воздуха в холодное время года и могут использоваться как охлаждающий и отопительный прибор.
+    href: "#"

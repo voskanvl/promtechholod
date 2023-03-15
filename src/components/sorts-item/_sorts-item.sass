@@ -1,0 +1,57 @@
+.sorts-item
+    display: block
+    padding: res-h(16px) 16px res-h(51px)
+    background: #E2E2E2
+    position: relative
+    border-radius: 30px
+    height: res-h(400px)
+    overflow: hidden
+    text-decoration: none
+    color: $main-color
+
+    &__title
+        background: #fff
+        padding: 22px 40px
+        border-radius: 46px
+        margin-bottom: res-h(49px)
+
+    &__text
+        width: 85%
+        margin: 0 auto
+        height: 45%
+        overflow: auto
+        scrollbar-width: thin
+        &::-webkit-scrollbar
+            width: 1px
+            background: #0003
+        &::-webkit-scrollbar-thumb
+            background: #fff
+
+    &__id
+        background: #fff
+        border-radius: 50%
+        width: 58px
+        aspect-ratio: 1
+        position: absolute
+        right: 16px
+        bottom: 18px
+        display: grid
+        place-items: center
+
+    &__back
+        position: absolute
+        inset: 0
+        background: #fff
+        display: grid
+        place-items: center
+        opacity: 0
+        transition: $std-time
+
+    &__wrap
+        display: flex
+        flex-direction: column
+        align-items: center
+        row-gap: res-h(36px)
+
+    &:hover > .sorts-item__back
+        opacity: 1
