@@ -1,5 +1,6 @@
 import "./sass/style.sass";
-// import '@splidejs/splide/css';
+import slides from "./slides";
+import "@splidejs/splide/css";
 
 //---toggle menu modal ---
 
@@ -27,3 +28,5 @@ const closeElement = document.querySelector<HTMLElement>(".modal-menu__close");
             document.body.style.overflow = "";
         }
     });
+
+slides();

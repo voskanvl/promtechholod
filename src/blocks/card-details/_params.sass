@@ -1,0 +1,27 @@
+.params
+
+    &__delimited
+        padding: 0
+        border-top: 1px solid $main-color
+        border-bottom: 1px solid $main-color
+        list-style: none
+
+        & > li
+            padding: res-h(21px) 0
+            &:not(:last-child)
+                border-bottom: 1px solid $main-color
+
+    &__controls
+        margin-top: res-h(58px)
+        display: flex
+        align-items: center
+        justify-content: space-between
+        column-gap: res-w(29px)
+
+        & > *
+            flex: 1 1 100%
+
+        & > .button
+            color: $main-color
+            border: 1px solid $main-color
+            background: transparent

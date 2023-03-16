@@ -1,0 +1,7 @@
+card:
+  - id: 401
+    src: "../../assets/images/card/1.png"
+  - id: 402
+    src: "../../assets/images/card/2.png"
+  - id: 403
+    src: "../../assets/images/card/3.png"

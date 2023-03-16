@@ -1,0 +1,75 @@
+.card-details
+    margin-bottom: res-h(76px)
+
+    &__main
+        display: grid
+        grid-template-columns: repeat(2, 49%)
+        gap: 1%
+
+        @media (width <= 600px)
+            grid-template-columns: 100%
+
+    &__params
+        background: rgba($button-color, 30%)
+        padding: res-h(23px) res-w(36px)
+        margin-top: res-h(32px)
+
+    &__properties
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-bottom: res-h(-32px)
+
+    &__property
+        background: #fff
+        display: grid
+        place-items: center
+        border-radius: 30px
+        border: 1px solid $main-color
+        padding: 0 res-w(31px)
+        height: res-h(65px)
+
+    &__big-image
+        background: #fff
+        display: grid
+        place-items: center
+        height: res-h(537px)
+        margin-bottom: 15px
+
+        & > img
+            width: 80%
+
+        @media (width <= 600px)
+            height: 45vh
+
+    &__slider
+        width: 100%
+        display: flex
+        justify-content: space-between
+
+        & > .splide
+            width: 75%
+            & .splide__slide
+                // margin-inline: 8px
+                padding-inline: 8px
+
+        @media (width <=1024px)
+            grid-column: 1 / -1
+        @media (width <= 600px)
+            grid-row: 2
+
+    &__card-item.card
+        background: #fff
+        display: grid
+        place-items: center
+        border-radius: 20px
+        height: 100%
+        padding: res-h(12px) res-w(12px)
+
+    &__controls
+        background: #fff
+        display: flex
+        padding: res-w(27px) res-w(26px)
+        column-gap: res-w(26px)
+        align-self: center
+        cursor: pointer

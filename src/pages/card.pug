@@ -6,11 +6,13 @@ include ../components/breadcrumbs/breadcrumbs.pug
 
 block main 
     .card 
+        - 
+            const bdc = [{href:"/",text:"Главная"},{href:"/catalog.html",text:"Каталог"},{href:"#",text:"Настенные сплит системы"}, {href:"#",text:"Блок внутренний ASYG12LMCE"}]
         .container.card__container
-            - 
-                const bdc = [{href:"/",text:"Главная"},{href:"/catalog.html",text:"Каталог"},{href:"#",text:"Настенные сплит системы"}, {href:"#",text:"Блок внутренний ASYG12LMCE"}]
             .card__breadcrumbs
                 +breadcrumbs(...bdc)
+            button.button.button--white.card__button-back Вернуться в каталог
+        include ../blocks/card-details/card-details.pug
 
-            +cart-button()
+        +cart-button()
 

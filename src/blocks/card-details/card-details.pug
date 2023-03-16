@@ -1,0 +1,39 @@
+include ../../pug/splides.pug
+
+.card-details
+    .container.card-details__container
+        +block-line("01/","")
+            | Настенные сплит системы 
+        main.card-details__main 
+            .card-details__main--left
+                .card-details__properties 
+                    .card-details__property Минимальный уровень шума
+                    .card-details__property Функциональность
+                    .card-details__property Эффективность
+                .card.card-details__big-image
+                    img(src="../../../assets/images/tizer/front.png")
+
+            .card-details__main--right
+                .card.card-details__params.params 
+                    h2.params__header Блок внутренний ASYG12LMCE
+                    .params__code Код товара: 08.06.20_Блок внутренний ASYG12LMCE
+                    .params__availability Наличие: Есть на складе
+                    p.params__description Модели серии airflow являются представителями новейшего идеально сбалансированного по своим характеристикам поколения бытовых сплит-систем и отличаются повышенной производительностью и скоростью, с которой достигается задаваемая с пульта температура. 
+
+                    ul.params__delimited
+                        li Производитель: Fujitsu
+                        li Тип: Настенный блок
+                        li Производительность, охлаждение, кВт: 3,4
+
+
+                    .params__controls 
+                        +cart-button()
+                        button.button Доставка и оплата
+
+            .card-details__slider
+                +splide("card",card)
+                    .card-details__card-item.card 
+                        img(src= val.src)
+                .card-details__controls.card  
+                    img.card-details__control.card-details__control--left(src="../../../assets/svg/arrow-left.svg")
+                    img.card-details__control.card-details__control--right(src="../../../assets/svg/arrow-right.svg")
