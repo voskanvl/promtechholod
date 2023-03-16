@@ -5,20 +5,25 @@
         height: 0
         overflow: hidden
         transition: $std-time
+        position: relative
 
         & > .card
             position: absolute
+            left: 0
+            right: 0
             padding: res-h(33px) res-w(34px)
             background: #fff
             transition: $std-time ease-in-out
-            translate: -200% 0
+            scale: 1 0
+            transform-origin: 50% 0
 
             &[active]
-                translate: 0% 0
+                scale: 1 1
+                // translate: 0% 0
 
         &[active]
             max-height: 50vh
-            height: 35vh
+            height: 39vh
 
     &__specifications-data
         display: grid
@@ -29,8 +34,12 @@
             margin-top: 1em
 
     &__buttons
-        display: flex
+        display: grid
+        grid-template-columns: repeat(3,33%)
         margin-bottom: 2em
+        width: 66%
+        @media (width <= 768px)
+            width: 100%
 
     &__button.button
         color: $main-color

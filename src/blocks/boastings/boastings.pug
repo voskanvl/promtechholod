@@ -1,0 +1,10 @@
+include ../../components/list/list.pug
+include ../../components/group-item/group-item.pug
+
+.boastings
+    .container.boastings__container
+        +list(boastings)
+            .card.boastings__card 
+                img(src= val.icon)
+                p= val.text
+
