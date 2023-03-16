@@ -1,0 +1,23 @@
+.cart-button
+    border: 1px solid $button-color
+    border-radius: 32.5px
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    column-gap: res-w(20px)
+    padding-left: res-w(37px)
+    height: res-h(65px)
+    position: relative
+    background: #fff
+
+    &::after
+        content: ""
+        background: url("../../assets/svg/cart-button.svg") 50% 50% no-repeat
+        position: absolute
+        z-index: 1
+        height: 100%
+        aspect-ratio: 1
+        border-radius: 50%
+        border: 1px solid $button-color
+        border-radius: 32.5px
+        right: 0

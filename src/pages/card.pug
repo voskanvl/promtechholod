@@ -1,0 +1,16 @@
+extends ../pug/templates/template.pug
+include ../components/block-line/block-line.pug
+include ../components/cart-button/cart-button.pug
+include ../components/breadcrumbs/breadcrumbs.pug
+
+
+block main 
+    .card 
+        .container.card__container
+            - 
+                const bdc = [{href:"/",text:"Главная"},{href:"/catalog.html",text:"Каталог"},{href:"#",text:"Настенные сплит системы"}, {href:"#",text:"Блок внутренний ASYG12LMCE"}]
+            .card__breadcrumbs
+                +breadcrumbs(...bdc)
+
+            +cart-button()
+

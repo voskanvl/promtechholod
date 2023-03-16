@@ -1,0 +1,5 @@
+mixin breadcrumbs(...args)
+    ul.breadcrumbs
+        each i in args 
+            li.breadcrumbs__item
+                a(href= i.href)= i.text 
