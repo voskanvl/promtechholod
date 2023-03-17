@@ -2,8 +2,7 @@ import store from "./store/index";
 
 export default function accordion() {
     const accordionButtons = document.querySelectorAll<HTMLElement>(".accordion__button");
-    if (!accordionButtons || !accordionButtons.length)
-        throw Error("there isn't .accordion__buttons");
+    if (!accordionButtons || !accordionButtons.length) return;
 
     const detailsContainer = document.querySelector<HTMLElement>(".accordion__details");
     if (!detailsContainer) throw Error("there isn't .accordion__details");

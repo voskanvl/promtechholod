@@ -30,5 +30,6 @@ const closeElement = document.querySelector<HTMLElement>(".modal-menu__close");
         }
     });
 
-slides();
+const slidesEl = slides();
 accordion();
+window.slides = slidesEl;
