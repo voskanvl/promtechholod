@@ -1,0 +1,7 @@
+include ../../components/attractive-item/attractive-item.pug
++block-line("02/")
+    | Выгодные предложения
+.attractive-offer
+    .attractive-offer__container.container
+        each i in attractive
+            +attractive-item(i)

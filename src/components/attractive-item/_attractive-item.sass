@@ -1,0 +1,22 @@
+.attractive-item
+    background: #fff
+    padding: res-h(39px) res-w(37px)
+    position: relative
+
+    & > img
+        width: 70%
+        margin-block: res-h(106px) res-h(64px)
+
+    &__footer
+        display: flex
+        align-items: center
+        justify-content: center
+
+        & > *
+            flex: 1
+
+    &__title
+        color: rgba($main-color, 50%)
+
+    &__action
+        @extend .similar-item__new
