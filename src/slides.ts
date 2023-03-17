@@ -25,8 +25,31 @@ export default function slides() {
             right: document.querySelector<HTMLElement>(".card-details__control--right")!,
         },
     };
+    const similar: OptionSlide = {
+        elementName: "#similar",
+        elementElement: document.querySelector<HTMLElement>("#similar")!,
+        options: {
+            type: "loop",
+            arrows: false,
+            perPage: 4,
+            pagination: false,
+            breakpoints: {
+                1024: {
+                    perPage: 2,
+                },
+                600: {
+                    perPage: 1,
+                },
+            },
+        },
+        controls: {
+            left: document.querySelector<HTMLElement>(".similar__control--left")!,
+            right: document.querySelector<HTMLElement>(".similar__control--right")!,
+        },
+    };
 
     return new SlideClass({
         card,
+        similar,
     });
 }

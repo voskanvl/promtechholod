@@ -8,6 +8,7 @@
         "build": "tsc && vite build",
         "preview": "vite preview",
         "createComponent": " bash ./create-component.bash",
+        "createBlock": " bash ./create-block.bash",
         "tar": "tar -czvf dist.tar.gz ./dist"
     },
     "devDependencies": {

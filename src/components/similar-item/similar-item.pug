@@ -1,0 +1,8 @@
+mixin similar-item(item)
+    .similar-item.card 
+        .similar-item__image
+            img(src= item.src)
+        .similar-item__title= item.title
+        .similar-item__name= item.name
+        .similar-item__button
+            +cart-button()

@@ -1,6 +1,11 @@
+include ../../components/similar-item/similar-item.pug
+
 +block-line("02/","")
     | Похожие товары
 .similar
     .similar__container.container
         +splide("similar", similar)
             +similar-item(val)
+        .similar__controls.card  
+            img.similar__control.similar__control--left(src="../../../assets/svg/arrow-left.svg")
+            img.similar__control.similar__control--right(src="../../../assets/svg/arrow-right.svg")

@@ -1,0 +1,24 @@
+.similar-item
+    background: #fff
+    padding: res-h(17px) res-w(15px)
+    margin-inline: res-w(15px)
+    height: res-h(567px)
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    row-gap: res-h(8px)
+
+    &__image
+        display: grid
+        place-items: center
+        flex: 1 1 100%
+        & > img
+            width: 80%
+
+    &__button
+        align-self: stretch
+        margin-top: res-h(48px)
+
+    &__title
+        color: rgba($main-color, 50%)
