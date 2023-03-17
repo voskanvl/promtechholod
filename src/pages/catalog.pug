@@ -1,0 +1,20 @@
+extends ../pug/templates/template.pug
+include ../components/block-line/block-line.pug
+include ../components/cart-button/cart-button.pug
+include ../components/breadcrumbs/breadcrumbs.pug
+include ../pug/splides.pug
+
+
+block main 
+    .catalog 
+        - 
+            const bdc = [{href:"/",text:"Главная"},{href:"/catalog.html",text:"Каталог"}]
+        .container.card__container
+            .card__breadcrumbs
+                +breadcrumbs(...bdc)
+        include ../blocks/product-list/product-list.pug
+        include ../blocks/middle/middle.pug
+        include ../blocks/news/news.pug
+
+
+

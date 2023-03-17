@@ -1,0 +1,32 @@
+include ../radio-element/radio-element.pug
+.filter.card
+    .filter__container 
+        form.filter__accordion(action="")
+            .filter__accordion-item.accordion-item
+                input.accordion-item__trigger(type="checkbox")
+                .accordion-item__title
+                    span Цена
+                    img(src="../../../assets/svg/chevron.svg")
+                .accordion-item__form.inputs-container(action="")
+                    input(type="number" name="from" placeholder="100")
+                    span -
+                    input(type="number" name="to" placeholder="50 000")
+            .filter__accordion-item.accordion-item
+                input.accordion-item__trigger(type="checkbox")
+                .accordion-item__title
+                    span Производители
+                    img(src="../../../assets/svg/chevron.svg")
+                .accordion-item__form.accordion-item__form-list(action="")
+                    each i in vendors
+                        +radio-element(i,"vendor", i)
+            .filter__accordion-item.accordion-item
+                input.accordion-item__trigger(type="checkbox")
+                .accordion-item__title
+                    span Цвет 
+                    img(src="../../../assets/svg/chevron.svg")
+                .accordion-item__form.accordion-item__form-list(action="")
+                    each i in ["Белый","Цветной"]
+                        +radio-element(i,"vendor", i)
+        .filter__controls 
+            button.button.button--white Подобрать
+            button.button Сбросить

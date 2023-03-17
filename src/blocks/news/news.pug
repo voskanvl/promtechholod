@@ -1,0 +1,11 @@
+include ../../components/similar-item/similar-item.pug
+
++block-line("02/","")
+    | Новинки
+.news
+    .news__container.container
+        +splide("news", news)
+            +similar-item(val)
+        .news__controls.card  
+            img.news__control#news-left(src="../../../assets/svg/arrow-left.svg")
+            img.news__control#news-right(src="../../../assets/svg/arrow-right.svg")

@@ -1,0 +1,14 @@
+.list-filter
+    margin-bottom: res-h(139px)
+    &__container
+        display: grid
+        grid-template-columns: 25% 73%
+        column-gap: res-w(30px)
+
+    &__list
+        & > .list
+            grid-template-columns: repeat(3, 33%)
+
+        & > .button
+            display: block
+            margin: res-h(57px) auto 0

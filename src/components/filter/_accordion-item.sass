@@ -1,0 +1,51 @@
+.accordion-item
+    position: relative
+    border-bottom: 2px solid #fff
+
+    &__form-list
+        margin-top: res-h(16px)
+        display: flex
+        flex-direction: column
+        row-gap: res-h(14px)
+
+    &__title
+        display: flex
+        align-items: center
+        justify-content: space-between
+        & > img
+            rotate: 0
+            transition: transform $std-time
+
+    &__form
+        max-height: 50vh
+        transition: $std-time
+        overflow: hidden
+        & > input
+            border: none
+            border-radius: 30px
+            font-size: 16px
+            padding: 10px 22px
+            width: 45%
+        & > span
+            color: #fff
+
+        &.inputs-container
+            display: flex
+            align-items: center
+            justify-content: center
+            column-gap: res-w(10px)
+            padding-top: res-h(15px)
+
+    &__trigger
+        display: block
+        position: absolute
+        height: 30px
+        width: 100%
+        z-index: 1
+        opacity: 0
+        &:checked
+            & ~ .accordion-item__form
+                max-height: 0vh
+                padding: 0
+            & + .accordion-item__title > img
+                rotate: 180deg

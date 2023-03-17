@@ -1,0 +1,9 @@
+include ../../components/list/list.pug
+include ../../components/group-item/group-item.pug
+
++block-line("01/","")
+    | Настенные сплит системы
+.product-list 
+    .container.product-list__container
+        +list(groups)
+            +group-item(val)
