@@ -24,11 +24,11 @@ export class SlideClass {
                 if (!val.controls) return { ...acc, [key]: splide };
                 !!val.controls.left &&
                     val.controls.left.addEventListener("click", () => {
-                        splide.go("<");
+                        splide.go("-1");
                     });
                 !!val.controls.right &&
                     val.controls.right.addEventListener("click", () => {
-                        splide.go(">");
+                        splide.go("+1");
                     });
                 return { ...acc, [key]: splide };
             }, {});
