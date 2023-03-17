@@ -8,7 +8,17 @@ type:
     src: "../../assets/images/tizer/front.png"
     title: Настенный блок
     name: Блок внутренний ASYG07KETA
-    new: true
+    new: 
+  - id: 901
+    src: "../../assets/images/tizer/front.png"
+    title: Настенный блок
+    name: Блок внутренний ASYG07KETA
+    new: 
+  - id: 901
+    src: "../../assets/images/tizer/front.png"
+    title: Настенный блок
+    name: Блок внутренний ASYG07KETA
+    new: 
   - id: 901
     src: "../../assets/images/tizer/front.png"
     title: Настенный блок
@@ -18,22 +28,12 @@ type:
     src: "../../assets/images/tizer/front.png"
     title: Настенный блок
     name: Блок внутренний ASYG07KETA
-    new: true
+    new: 
   - id: 901
     src: "../../assets/images/tizer/front.png"
     title: Настенный блок
     name: Блок внутренний ASYG07KETA
-    new: true
-  - id: 901
-    src: "../../assets/images/tizer/front.png"
-    title: Настенный блок
-    name: Блок внутренний ASYG07KETA
-    new: true
-  - id: 901
-    src: "../../assets/images/tizer/front.png"
-    title: Настенный блок
-    name: Блок внутренний ASYG07KETA
-    new: true
+    new: 
   - id: 901
     src: "../../assets/images/tizer/front.png"
     title: Настенный блок

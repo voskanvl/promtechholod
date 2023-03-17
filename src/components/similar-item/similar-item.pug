@@ -1,5 +1,7 @@
 mixin similar-item(item)
     .similar-item.card 
+        if item.new 
+            .similar-item__new Новинка
         .similar-item__image
             img(src= item.src)
         .similar-item__title= item.title
