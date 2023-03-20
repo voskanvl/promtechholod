@@ -1,14 +1,75 @@
 .list-filter
     margin-bottom: res-h(139px)
+    position: relative
     &__container
         display: grid
         grid-template-columns: 25% 73%
         column-gap: res-w(30px)
+        transition: $std-time
+
+        @media (width <= 1024px)
+            grid-template-columns: 100%
 
     &__list
         & > .list
             grid-template-columns: repeat(3, 33%)
+            @media (width <= 1024px)
+                grid-template-columns: repeat(3,33%)
+            @media (width <= 680px)
+                grid-template-columns: repeat(2,49%)
+            @media (width <= 500px)
+                grid-template-columns: 100%
 
         & > .button
             display: block
             margin: res-h(57px) auto 0
+
+    &__trigger-title
+        position: absolute
+        top: 0
+        rotate: 0 0 1 -90deg
+        translate: -30px 0px
+        font-size: clamp(20px,25/1024*100vw,25px)
+        z-index: 10
+        @media (width <= 1024px)
+            rotate: 0 0
+            left: max(1em, 3.125vw)
+            top: -1.4em
+
+    &__trigger
+        position: absolute
+        left: 20px
+        width: 30px
+        height: 80px
+        z-index: 11
+        opacity: .2
+        @media (width <= 1024px)
+            rotate: 0 0
+            left: max(1em, 3.125vw)
+            top: -2.4em
+            width: 9em
+            height: 3em
+
+        &:checked
+            & + .list-filter__container
+                grid-template-columns: 0% 100%
+                & .filter
+                    padding: 0
+                    @media (width <= 1024px)
+                        width: 0
+                @media (width <= 1024px)
+                    grid-template-columns: 100%
+
+                & .list
+                    grid-template-columns: repeat(4,24%)
+                    @media (width <= 1024px)
+                        grid-template-columns: repeat(3,33%)
+                    @media (width <= 680px)
+                        grid-template-columns: repeat(2,49%)
+                    @media (width <= 500px)
+                        grid-template-columns: 100%
+
+    &__filter
+        @media (width <= 1024px)
+            position: absolute
+            z-index: 5

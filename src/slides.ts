@@ -69,6 +69,9 @@ export default function slides() {
                 perPage: 4,
                 pagination: false,
                 breakpoints: {
+                    1440: {
+                        perPage: 3,
+                    },
                     1024: {
                         perPage: 2,
                     },

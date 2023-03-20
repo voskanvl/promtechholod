@@ -4,8 +4,14 @@ attractive:
     title: Настенный 
     name: Блок внутренний ASYG07KETA
     action: true
+    price:
+      last: 90 000 &#8381; 
+      current: 80 000 &#8381;
   - id: 1002
     src: "../../assets/images/tizer/front.png"
     title: Настенный 
     name: Блок внутренний ASYG07KETA
     action: true
+    price:
+      last: 100 000 &#8381; 
+      current: 90 000 &#8381;

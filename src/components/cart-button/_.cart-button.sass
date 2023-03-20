@@ -23,3 +23,20 @@
         border: 1px solid $button-color
         border-radius: 32.5px
         right: 0
+
+    &__text
+        display: flex
+        align-items: center
+        justify-content: center
+        column-gap: res-w(18px)
+
+        & > *
+            line-height: 1
+
+        & > .last-price
+            font-size: clamp(11px,15/1920*100vw,15px)
+
+        & > .current-price
+            font-weight: 400
+            font-size: clamp(14px,25/1920*100vw,25px)
+            color: #005389

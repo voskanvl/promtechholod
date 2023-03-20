@@ -3,6 +3,7 @@
     align-items: center
     column-gap: res-w(21px)
     position: relative
+
     & > input
         opacity: 0
         position: absolute
@@ -10,7 +11,7 @@
         & + .ersatz
             display: inline-block
             border: 2px solid #fff
-            width: res-w(26px)
+            width: clamp(20px,26/1024*100vw,26px)
             aspect-ratio: 1
             border-radius: 50%
         &:checked + .ersatz

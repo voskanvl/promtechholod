@@ -7,4 +7,7 @@ mixin similar-item(item)
         .similar-item__title= item.title
         .similar-item__name= item.name
         .similar-item__button
-            +cart-button()
+            if item.price
+                +cart-button(`<s class="last-price">${item.price.last}</s><strong class="current-price">${item.price.current}</strong>`)
+            else
+                +cart-button()

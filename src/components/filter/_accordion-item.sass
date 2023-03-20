@@ -7,6 +7,11 @@
         display: flex
         flex-direction: column
         row-gap: res-h(14px)
+        @media (width <= 768px)
+            flex-direction: row
+            flex-wrap: wrap
+            & > .radio-element
+                flex-basis: 49%
 
     &__title
         display: flex

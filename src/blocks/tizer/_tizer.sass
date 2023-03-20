@@ -1,5 +1,6 @@
 .tizer
     margin-bottom: res-h(142px)
+    // position: relative
     @media (width<=500px)
         margin-bottom: -50px
 
@@ -7,11 +8,14 @@
         background-image: url("../../../assets/images/tizer.png")
         background-repeat: no-repeat
         background-position: 100% 50%
+        background-size: cover
         position: absolute
         top: -6px
         left: 0
-        width: 100%
-        height: calc(945px/$std-h*100vh)
+        width: min(1920px,100%)
+        left: 50%
+        translate: -50% 0
+        height: min(945px, 945px/$std-h*100vh)
         z-index: -1
 
     &__container
@@ -55,7 +59,7 @@
 
         &--group
             background-image: url("../../../assets/images/tizer/group.png")
-            width: calc(1080/1920*100vw)
+            width: min(1080px, 1080/1920*100vw)
             aspect-ratio: 1080 / 487
             left: 38%
             top: 21%

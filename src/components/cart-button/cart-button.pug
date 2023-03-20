@@ -1,4 +1,4 @@
-mixin cart-button()
+mixin cart-button(text="Уточнить цену")
     .cart-button 
-        span.cart-button__text Уточнить цену
-        img.cart-button__arrow(src="../../../assets/svg/arrow-right.svg")
+        span.cart-button__text!= text
+        //- img.cart-button__arrow(src="../../../assets/svg/arrow-right.svg")

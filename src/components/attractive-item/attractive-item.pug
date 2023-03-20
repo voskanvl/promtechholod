@@ -9,4 +9,7 @@ mixin attractive-item(item)
                 .attractive-item__title= item.title
                 .attractive-item__name= item.name
             .attractive-item__right
-                +cart-button()
+                if item.price
+                    +cart-button(`<s class="last-price">${item.price.last}</s><strong class="current-price">${item.price.current}</strong>`)
+                else
+                    +cart-button()

@@ -4,43 +4,70 @@ type:
     title: Настенный блок
     name: Блок внутренний ASYG07KETA
     new: true
+    price:
+      last: 30 000 &#8381; 
+      current: 40 000 &#8381; 
   - id: 901
     src: "../../assets/images/tizer/front.png"
     title: Настенный блок
     name: Блок внутренний ASYG07KETA
     new: 
+    price:
+      last: 30 000 &#8381; 
+      current: 40 000 &#8381; 
   - id: 901
     src: "../../assets/images/tizer/front.png"
     title: Настенный блок
     name: Блок внутренний ASYG07KETA
     new: 
+    price:
+      last: 30 000 &#8381; 
+      current: 40 000 &#8381; 
   - id: 901
     src: "../../assets/images/tizer/front.png"
     title: Настенный блок
     name: Блок внутренний ASYG07KETA
     new: 
+    price:
+      last: 30 000 &#8381; 
+      current: 40 000 &#8381; 
   - id: 901
     src: "../../assets/images/tizer/front.png"
     title: Настенный блок
     name: Блок внутренний ASYG07KETA
     new: true
+    price:
+      last: 30 000 &#8381; 
+      current: 40 000 &#8381; 
   - id: 901
     src: "../../assets/images/tizer/front.png"
     title: Настенный блок
     name: Блок внутренний ASYG07KETA
     new: 
+    price:
+      last: 30 000 &#8381; 
+      current: 40 000 &#8381; 
   - id: 901
     src: "../../assets/images/tizer/front.png"
     title: Настенный блок
     name: Блок внутренний ASYG07KETA
     new: 
+    price:
+      last: 30 000 &#8381; 
+      current: 40 000 &#8381; 
   - id: 901
     src: "../../assets/images/tizer/front.png"
     title: Настенный блок
     name: Блок внутренний ASYG07KETA
     new: true
+    price:
+      last: 30 000 &#8381; 
+      current: 40 000 &#8381; 
   - id: 901
     src: "../../assets/images/tizer/front.png"
     title: Настенный блок
     name: Блок внутренний ASYG07KETA
     new: true
+    price:
+      last: 30 000 &#8381; 
+      current: 40 000 &#8381; 
