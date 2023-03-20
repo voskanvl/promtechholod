@@ -14,16 +14,17 @@ function getShortName(file, root) {
 }
 
 const merge = () => {
-    console.log(`now merging data files`);
     const fn = { json: JSON.parse, yaml: yaml.load, yml: yaml.load };
     const files = readdirSync(resolve(__dirname, "src/data"));
-    return files.reduce(
+    const res = files.reduce(
         (acc, file) => ({
             ...acc,
             ...fn[extname(file).slice(1)](readFileSync(resolve(__dirname, "src/data", file))),
         }),
         {},
     );
+    console.log(`now merging [${colors.green(Object.keys(res).join(",\n"))}] files`);
+    return res;
 };
 
 function htmlsFiles() {

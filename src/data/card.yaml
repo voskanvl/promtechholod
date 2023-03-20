@@ -1,7 +1,16 @@
 card:
   - id: 401
     src: "../../assets/images/card/1.png"
+    price:
+      last: 80 000 &#8381;
+      current: 70 000 &#8381;
   - id: 402
     src: "../../assets/images/card/2.png"
+    price:
+      last: 80 000 &#8381;
+      current: 70 000 &#8381;
   - id: 403
     src: "../../assets/images/card/3.png"
+    price:
+      last: 80 000 &#8381;
+      current: 70 000 &#8381;
