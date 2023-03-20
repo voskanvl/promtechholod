@@ -1,10 +1,19 @@
 .news
     margin-bottom: res-h(88px)
+
+    &__container
+        & .splide__slide
+            @media (width <= 650px)
+                display: flex
+                justify-content: center
+
     &__controls
         @extend .card-details__controls
         width: max-content
         margin-left: auto
         margin-top: res-h(29px)
+        justify-content: space-between
 
         & > img
             display: block
+            width: clamp(20px,31/1024*100vw,31px)

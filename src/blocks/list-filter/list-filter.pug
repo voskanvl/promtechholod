@@ -3,8 +3,10 @@ include ../../components/similar-item/similar-item.pug
 +block-line("01/")
     | Настенные сплит системы 
 .list-filter
-    .list-filter__trigger-title Фильтр
     input.list-filter__trigger(type="checkbox")
+    .list-filter__trigger-title 
+        span Фильтр
+        img(src="../../../assets/svg/chevron.svg")
     .list-filter__container.container
         .list-filter__filter
             include ../../components/filter/filter.pug

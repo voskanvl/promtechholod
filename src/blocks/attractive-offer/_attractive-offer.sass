@@ -5,5 +5,9 @@
 
     &__container
         display: flex
-        justify-content: center
-        column-gap: res-w(30px)
+        align-items: center
+        gap: res-w(30px)
+        flex-wrap: wrap
+
+        & > *
+            flex: 1 1 max(420px,49%)
