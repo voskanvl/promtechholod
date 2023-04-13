@@ -1,0 +1,106 @@
+.modal
+    position: fixed
+    left: 0
+    top: 0
+    width: 100vw
+    height: 100dvh
+    overflow: hidden
+    display: grid
+    place-items: center
+    background: #fff2
+    backdrop-filter: blur(8px)
+
+    form.form-modal
+        background: #91C2E2
+        color: #fff
+        border-radius: 30px
+        padding: 29px res-h(38px)
+        display: flex
+        row-gap: max(5px, res-h(20px))
+        flex-direction: column
+        width: min(473px,96%)
+        position: relative
+
+        .form-title
+            font-size: clamp(16px,32 / 1024 * 100vw,32px)
+            line-height: 110.02%
+            letter-spacing: -0.03em
+            color: #FFFFFF
+
+        input, textarea
+            color: #fff
+            padding: res-h(12px) 30px
+            background: rgba(255, 255, 255, 0.1)
+            border: 1px solid #FFFFFF
+            box-shadow: inset 0px 0px 68px rgba(255, 255, 255, 0.05)
+            border-radius: 50px
+            width: 100%
+
+            &::placeholder
+                color: #fff
+
+            &[type="checkbox"]
+                box-shadow: none
+                width: unset
+
+            &[type="submit"]
+                background: #fff
+                font-size: 20px
+                color: #4b4b4b
+                width: min(185px, 96%)
+
+                &[passive]
+                    color: rgba(#4b4b4b, 0.5)
+                    background: #ddd
+                    border-color: #ddd
+
+        textarea
+            border-radius: 20px
+            height: min(175px, 18dvh)
+
+        label
+            display: flex
+            column-gap: max(5px, 22 / 1920 * 100vw)
+
+            p
+                font-size: 13px
+
+        output
+            color: #f50
+            height: 28px
+            font-size: 15px
+
+    form.search-modal
+        user-select: none
+        display: flex
+        border-bottom: 2px solid #91C2E2
+        position: relative
+        padding-bottom: 10px
+        width: min(840px, 96vw)
+        justify-content: space-between
+
+        input
+            background: none
+            border: none
+            outline: none
+            font-size: 20px
+
+        .close
+            top: -12vh
+            right: 0rem
+
+    .close
+        position: absolute
+        top: -3rem
+        right: -3rem
+        cursor: pointer
+
+        svg
+            width: 100%
+            height: 100%
+
+        @media (width <= 580px) or (height <= 600px)
+            top: 10px
+            right: 10px
+            width: 32px
+            height: 32px

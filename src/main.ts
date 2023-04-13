@@ -2,6 +2,7 @@ import "./sass/style.sass";
 import slides from "./slides";
 import "@splidejs/splide/css";
 import accordion from "./accordion";
+import modal from "./modal";
 
 //---toggle menu modal ---
 
@@ -30,6 +31,7 @@ const closeElement = document.querySelector<HTMLElement>(".modal-menu__close");
         }
     });
 
-const slidesEl = slides();
+slides();
 accordion();
-window.slides = slidesEl;
+modal("form");
+modal("search");

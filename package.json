@@ -9,11 +9,12 @@
         "preview": "vite preview",
         "createComponent": " bash ./create-component.bash",
         "createBlock": " bash ./create-block.bash",
-        "tar": "tar -czvf dist.tar.gz ./dist"
+        "tar": "tar -czvf promtechhold.tar.gz ./dist"
     },
     "devDependencies": {
         "@types/node": "^18.11.18",
         "fast-glob": "^3.2.11",
+        "imask": "^6.6.0-alpha.0",
         "json-to-css": "^0.1.0",
         "postcss-media-minmax": "^5.0.0",
         "postcss-preset-env": "^7.8.3",
