@@ -98,6 +98,16 @@ slidesElements &&
         });
     });
 
+//-- CART ---
+
+const recalcCart = () => {
+    const costs = document.querySelectorAll<HTMLElement>(".cart__total > span:first-child");
+    const total = [...costs].reduce((acc, el) => acc + +el.innerText.replace(/\W/g, ""), 0);
+
+    const output = document.querySelector<HTMLElement>(".cart__overall .cart__total-overall");
+    output && (output.innerText = total.toLocaleString());
+};
+
 //--- COUNTER ---
 
 const counters = document.querySelectorAll<HTMLElement>(".counter");
@@ -118,5 +128,6 @@ counters &&
 
         counter.subscribe((val: number) => {
             total && (total.innerText = (val * price).toLocaleString());
+            recalcCart();
         });
     });

@@ -26,3 +26,16 @@ include ../../components/counter/counter.pug
             .cart__total
                 span 30 000
                 span!=  "&#8381;"
+
+    .cart__overall 
+        .cart__overall-left
+        .cart__overall-right
+            div 
+                .cart__item-name Итого:
+                .cart__item-type!= "Сумма НДС: 0 &#8381;"
+            .cart__total-overall 
+                span 60 000
+                span!= " &#8381;"
+
+            button.cart__label Оформить заказ
+

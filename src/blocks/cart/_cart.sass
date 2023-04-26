@@ -8,13 +8,21 @@
         color: #fff
 
     &__label
+        -webkit-appearance: none
+        appearance: none
+        border: none
+
+        display: flex
+        align-items: center
+        justify-content: center
+
         height: 65px
         background: #91C2E2
         border-radius: 60px
-        display: flex
-        align-items: center
         padding-inline: 16px
         cursor: pointer
+        color: #fff
+        font-size: 20px
 
     &__reset
         column-gap: 1em
@@ -26,17 +34,34 @@
     &__item
         margin-bottom: res-h(30px)
         display: grid
-        grid-template-columns: 1.5fr 2fr 1fr 1fr auto
+        grid-template-columns: 1.5fr 2fr 1fr 1fr 0.7fr
+        column-gap: res-w(73px)
         background: #FFFFFF
         border-radius: 30px
         padding: res-h(54px) res-w(58px)
-        column-gap: res-w(73px)
 
         img
             width: 100%
 
-    &__item-name, &__item-price, &__total
+    &__item-name, &__item-price, &__total, &__total-overall
         font-size: 25px
 
     &__item-type, &__item-unit
         color: rgba(75, 75, 75, 0.5)
+
+    &__overall
+        display: grid
+        grid-template-columns: repeat(2,1fr)
+
+    &__overall-right
+        background: #FFFFFF
+        border-radius: 30px
+        padding: res-h(54px) res-w(58px)
+        display: flex
+        column-gap: res-w(73px)
+
+        & > *:nth-child(3)
+            flex: 1
+
+    &__total-overall
+        flex-basis: 20%
