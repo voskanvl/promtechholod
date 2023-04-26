@@ -1,0 +1,42 @@
+.cart
+
+    &__labels
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        text-decoration: underline
+        color: #fff
+
+    &__label
+        height: 65px
+        background: #91C2E2
+        border-radius: 60px
+        display: flex
+        align-items: center
+        padding-inline: 16px
+        cursor: pointer
+
+    &__reset
+        column-gap: 1em
+
+        svg
+            & > path
+                stroke: #fff
+
+    &__item
+        margin-bottom: res-h(30px)
+        display: grid
+        grid-template-columns: 1.5fr 2fr 1fr 1fr auto
+        background: #FFFFFF
+        border-radius: 30px
+        padding: res-h(54px) res-w(58px)
+        column-gap: res-w(73px)
+
+        img
+            width: 100%
+
+    &__item-name, &__item-price, &__total
+        font-size: 25px
+
+    &__item-type, &__item-unit
+        color: rgba(75, 75, 75, 0.5)

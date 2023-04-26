@@ -1,0 +1,19 @@
+extends ../pug/templates/template.pug
+include ../components/block-line/block-line.pug
+include ../components/cart-button/cart-button.pug
+include ../components/breadcrumbs/breadcrumbs.pug
+
+
+block main 
+    .cart 
+        - 
+            const bdc = [{href:"/",text:"Главная"},{href:"#",text:"Корзина"}]
+        .container.cart__container
+            .cart__breadcrumbs
+                +breadcrumbs(...bdc)
+        include ../blocks/cart/cart.pug
+        include ../blocks/attractive-offer/attractive-offer.pug
+        include ../blocks/middle/middle.pug
+
+
+

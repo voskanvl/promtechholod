@@ -1,0 +1,28 @@
+include ../../components/counter/counter.pug
+
++block-line("01/")
+    | Корзина
+.cart__container.container 
+    .cart__labels 
+        .cart__label В корзине 3 товара
+        .cart__label.cart__reset 
+            include ../../../assets/svg/x.svg
+            span Очистить
+
+    each i in cart 
+        .cart__item 
+            img(src= i.img)
+            div 
+                .cart__item-name= i.name
+                .cart__item-type= i.type 
+            div 
+                .cart__item-price 
+                    span.cart__item-cost= i.price.toLocaleString()
+                    span!= " &#8381;"
+                .cart__item-unit= i.unit
+
+            div 
+                +counter 
+            .cart__total
+                span 30 000
+                span!=  "&#8381;"

@@ -10,12 +10,20 @@ const errorMessages = {
 const selectors = {
     form: { selector: ".modal-switcher", func: formModal },
     search: { selector: ".header__control--search", func: searchModal },
+    ok: { selector: null, func: okModal },
+    error: { selector: null, func: errorModal },
 };
 
 export default function modal(type: keyof typeof selectors) {
-    const switcher = document.querySelector<HTMLElement>(selectors[type].selector);
-    switcher && switcher.addEventListener("click", () => selectors[type].func());
+    if (selectors[type].selector) {
+        const switcher = document.querySelector<HTMLElement>(selectors[type].selector!);
+        switcher && switcher.addEventListener("click", () => selectors[type].func());
+    } else {
+        return selectors[type].func();
+    }
 }
+
+const sleep = (ms: number) => new Promise(r => setTimeout(r, ms));
 
 function createModal() {
     const modal = document.createElement("div"),
@@ -107,7 +115,7 @@ function formModal() {
 }
 
 function searchModal() {
-    const { modal, form, close } = createModal();
+    const { modal: modalEl, form, close } = createModal();
 
     form.classList.add("search-modal");
 
@@ -118,19 +126,74 @@ function searchModal() {
 
     form.append(close);
 
+    modalEl.classList.add("modal");
+    modalEl.append(form);
+
+    document.body.append(modalEl);
+
+    const handler = async () => {
+        try {
+            const res = await ky.post("/search.php", {
+                body: new FormData(form),
+            });
+            console.log(res);
+        } catch (error) {
+            modal("error");
+            await sleep(3000);
+        }
+    };
+
+    const searchButton = document.querySelector<HTMLElement>(".search-button");
+    const searchInput = document.querySelector<HTMLElement>(".search-modal > input");
+
+    searchButton && searchButton.addEventListener("click", handler);
+    searchInput &&
+        searchInput.addEventListener("keypress", ({ key }: KeyboardEvent) => {
+            console.log(key);
+            if (key === "Enter") handler();
+        });
+}
+
+function okModal(): HTMLElement {
+    const { modal, form, close } = createModal();
+
+    form.classList.add("form-modal");
+
+    form.innerHTML = `
+        <h2 style="text-align: center;">
+            Не двигайтесь с места. Вам ща будут звонить. Ясно?
+        </h2>
+    `;
+
+    form.append(close);
+
     modal.classList.add("modal");
     modal.append(form);
 
     document.body.append(modal);
 
-    const searchButton = document.querySelector<HTMLElement>(".search-button");
-    searchButton &&
-        searchButton.addEventListener("click", async () => {
-            try {
-                const res = await ky.post("/mail.php", {
-                    body: new FormData(form),
-                });
-                console.log(res);
-            } catch (error) {}
-        });
+    return modal;
+}
+
+function errorModal(): HTMLElement {
+    const { modal, form, close } = createModal();
+
+    form.classList.add("form-modal");
+
+    form.innerHTML = `
+        <h2 style="display: flex; flex-direction: column; row-gap: 10px; align-items: center;">
+            <p style="text-align: center;">Все пошло ни так!</p>
+            <p style="text-align: center;">Проблема не с нашей строны.</p>
+            <p style="color: #f50; text-align: center;">Меняй провайдера!</p>  
+        </h2>
+    `;
+
+    form.append(close);
+
+    modal.classList.add("modal");
+    modal.append(form);
+
+    document.body.append(modal);
+
+    return modal;
 }

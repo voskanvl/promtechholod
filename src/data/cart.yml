@@ -1,0 +1,11 @@
+cart:
+  - img: "../../assets/images/tizer/front.png"
+    name: Блок внутренний ASYG07KETA
+    type: Настенный блок
+    price: 30000
+    unit: Цена за 1 шт.
+  - img: "../../assets/images/tizer/front.png"
+    name: Блок внутренний ASYG07KETA
+    type: Настенный блок
+    price: 30000
+    unit: Цена за 1 шт.
