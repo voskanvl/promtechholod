@@ -1,0 +1,46 @@
+extends ../pug/templates/template.pug
+include ../components/block-line/block-line.pug
+include ../components/cart-button/cart-button.pug
+include ../components/breadcrumbs/breadcrumbs.pug
+
+
+block main 
+    .contacts 
+        - 
+            const bdc = [{href:"/",text:"Главная"},{href:"#",text:"Контакты"}]
+        .container.contacts__container 
+            .contacts__breadcrumbs
+                +breadcrumbs(...bdc)
+
+            .contacts__block
+                .contacts__data 
+                    .contacts__row Как с нами связаться:
+                    .contacts__row
+                        div.contacts__column
+                            small Адрес:
+                            div 
+                                p г. Пенза, 
+                                p ул. Новый Кавказ, 4А
+                        div.contacts__column
+                            small Часы работы:
+                            div 
+                                p Пн-Пт с 9:00 до 18:00, 
+                                p Сб с 9:00 до 14:00
+                    .contacts__row
+                        div.contacts__column
+                            small Телефоны:
+                            div 
+                                p
+                                    a(href="tel: +7 (909) 317-75-31") +7 (909) 317-75-31 
+                                p
+                                    a(href="tel: +7 (8412) 54-06-20") +7 (8412) 54-06-20 
+                        div.contacts__column
+                            small Почта:
+                            div 
+                                a(href="mailto: penza-moroz@yandex.ru") penza-moroz@yandex.ru
+                    button.button Перейти к покупкам
+                #map(style="width:100%; height:100%;")
+        include ../blocks/middle/middle.pug
+
+
+

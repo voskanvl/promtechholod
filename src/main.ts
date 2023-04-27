@@ -131,3 +131,16 @@ counters &&
             recalcCart();
         });
     });
+
+//--- GRAYSCALE MAP ---
+document.addEventListener("ymap", () => {
+    setTimeout(() => {
+        const map = document.querySelector<HTMLElement>("#map");
+        const flag = document.querySelector<HTMLElement>(
+            "#map [class*='inner-panes'] > ymaps:nth-child(5)",
+        );
+        map && [...(map.children as HTMLElement[])].forEach(e => (e.style.filter = "grayscale(1)"));
+        flag && (flag.style.filter = "grayscale(0)");
+        flag && map && map.append(flag);
+    }, 1000);
+});

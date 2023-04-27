@@ -1,0 +1,57 @@
+.contacts
+
+    &__container.container
+        margin-bottom: res-h(126px)
+        margin-top: res-h(44px)
+
+        @media (width <= 768px)
+            margin-bottom: 0
+
+    #map
+        position: relative
+        border-radius: 30px
+        overflow: hidden
+        [class*="inner-panes"]
+            & ymaps:nth-child(6)
+                // filter: grayscale(1)
+
+    &__data
+        background: rgba(#91C2E2, 30%)
+        border-radius: 30px
+        padding: 36px 33px
+
+        button.button
+            background: #fff
+            color: #005389
+
+    &__block
+        display: grid
+        grid-template-columns: repeat(2, 49%)
+        column-gap: 1%
+
+        @media (width <= 1024px)
+            grid-template-columns: 100%
+            row-gap: res-h(30px)
+            grid-template-rows: repeat(2, 1fr)
+
+    &__row
+        padding: 35px 0
+        border-bottom: 1px solid #484848
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+
+        &:nth-of-type(1)
+            padding-top: 0
+
+        &:nth-last-of-type(1)
+            margin-bottom: res-h(97px)
+
+    &__column
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        row-gap: res-h(27px)
+
+    .middle
+        margin-bottom: 0

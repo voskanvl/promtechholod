@@ -85,11 +85,17 @@
     & > .block-line
         position: absolute
         top: 30%
+        @media (width <=768px)
+            top: 45%
+
         @media (height <=590px)
-            top: 35%
+            top: 45%
 
             & .block-line__left
                 flex-basis: 100%
 
             & .block-line__right
                 display: none
+
+        @media (height <=460px)
+            top: 52%
