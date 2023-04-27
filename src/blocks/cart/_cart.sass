@@ -1,5 +1,11 @@
 .cart
 
+    &__container.container
+        margin-bottom: res-h(200px)
+
+    .block-line
+        margin-top: 0
+
     &__labels
         display: flex
         justify-content: flex-end
@@ -43,17 +49,32 @@
         img
             width: 100%
 
+        @media (width <= 1024px)
+            grid-template-columns: 1.5fr 2fr 1fr
+            row-gap: res-h(30px)
+
+        @media (width <= 768px)
+            & > *:nth-child(2)
+                grid-column: 2 / -1
+
+        @media (width <= 550px)
+            grid-template-columns: 100%
+            place-items: center
+
+            & > *:nth-child(2)
+                grid-column: unset
+                text-align: center
+
     &__item-name, &__item-price, &__total, &__total-overall
         font-size: 25px
 
     &__item-type, &__item-unit
         color: rgba(75, 75, 75, 0.5)
 
-    &__overall
-        display: grid
-        grid-template-columns: repeat(2,1fr)
-
     &__overall-right
+        width: min(880px, 100%)
+        margin-left: auto
+
         background: #FFFFFF
         border-radius: 30px
         padding: res-h(54px) res-w(58px)
@@ -62,6 +83,12 @@
 
         & > *:nth-child(3)
             flex: 1
+            min-height: 65px
+
+        @media (width <= 550px)
+            flex-direction: column
+            text-align: center
+            row-gap: 10px
 
     &__total-overall
         flex-basis: 20%

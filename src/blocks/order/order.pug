@@ -1,0 +1,55 @@
++block-line("01/")
+    | Оформление заказа
+.order__container.container 
+    form.order__form
+        .order__table
+            .order__block 
+                h3.order__title 1. Ваши данные
+                label
+                    header 
+                        span Номер телефона
+                        span.order__error Проверьте правильность введеного номера
+                    input.order__input(type="tel" name="phone")
+                label
+                    header 
+                        span E-mail
+                        span.order__error Проверьте корректность введеного email
+                    input.order__input(type="email" name="email" placeholder="example@mail.com" )
+                label
+                    header 
+                        span Имя
+                        span.order__error Вы забыли указать свое имя
+                    input.order__input(type="email" name="firstname" placeholder="Иван" )
+                label
+                    header 
+                        span Фамилия 
+                        span.order__error Вы забыли указать свою фамилию
+                    input.order__input(type="email" name="lastname" placeholder="Иванов" )
+
+            .order__block 
+                h3.order__title 2. Способы оплаты
+                label
+                    .order__input 
+                        span При получение наличными
+                        input.order__check(type="checkbox" name="phone")
+                        .order__puck
+                label
+                    .order__input
+                        span При получение картой или QR
+                        input.order__check(type="checkbox" name="email" placeholder="example@mail.com" )
+                        .order__puck
+                label
+                    .order__input
+                        span Онлайн
+                        input.order__check(type="checkbox" name="firstname" placeholder="Иван" )
+                        .order__puck
+                label
+                    .order__input
+                        span Оплата на рассчетный счет
+                        input.order__check(type="checkbox" name="lastname" placeholder="Иванов" )
+                        .order__puck
+
+            .order__block 
+            .order__block 
+            .order__block 
+        .order__total
