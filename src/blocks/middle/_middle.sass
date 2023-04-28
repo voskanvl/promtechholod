@@ -4,6 +4,10 @@
     background-size: cover
     background-position: center
     aspect-ratio: 16 / 9
+    margin-bottom: res-h(160px)
+
+    @media (width <= 768px)
+        background-size: 200% 100%
 
     &__back
         // height: res-h(695px)
@@ -17,9 +21,12 @@
         border: 1px solid $button-color
         border-radius: 30px
         margin-right: -50px
-        padding: 21px 50px 21px 34px
+        padding: res-h(21px) 50px res-h(21px) 34px
         font-size: 16px
         flex: 1 1 80%
+
+        @media (width <= 768px)
+            padding: res-h(1px) 50px res-h(1px) 34px
 
     &__button
         flex: 1 1 33%
