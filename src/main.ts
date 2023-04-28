@@ -6,6 +6,7 @@ import modal from "./modal";
 import ky from "ky";
 import IMask from "imask";
 import Counter from "./CounterClass";
+import { accordion2Store, accordionStore } from "./store";
 
 //---toggle menu modal ---
 
@@ -35,7 +36,21 @@ const closeElement = document.querySelector<HTMLElement>(".modal-menu__close");
     });
 
 slides();
-accordion();
+accordion(accordionStore);
+
+//--- init delivery tabs ---
+const isDelivery = !!document.querySelector(".main > .delivery");
+if (isDelivery) {
+    accordion(accordion2Store);
+    accordion2Store
+        .getState()
+        .set(
+            0,
+            document.querySelector(".button.accordion__button[data-id='0']"),
+            document.querySelector(".card[data-id='0']"),
+        );
+}
+
 modal("form");
 modal("search");
 

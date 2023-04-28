@@ -1,0 +1,20 @@
+extends ../pug/templates/template.pug
+include ../components/block-line/block-line.pug
+include ../components/cart-button/cart-button.pug
+include ../components/breadcrumbs/breadcrumbs.pug
+
+
+block main 
+    .delivery 
+        - 
+            const bdc = [{href:"/",text:"Главная"},{href:"№",text:"Доставка и оплата"}]
+        .container.card__container
+            .card__breadcrumbs
+                +breadcrumbs(...bdc)
+        +block-line("01/","Ниже вы можете ознакомиться с вариантами доставки и оплаты для физических и юридических лиц")
+            | Доставка и оплата
+        include ../blocks/accordion/accordion1.pug
+        include ../blocks/middle/middle.pug
+
+
+

@@ -46,6 +46,8 @@
         border: 1px solid $main-color
         background: #fff
         transition: background-color $std-time
+        border-right: none
+
         &:not(:first-child):not(:last-child)
             border-radius: 0
 
@@ -58,4 +60,4 @@
 
         &:last-child
             border-radius: 0 30px 30px 0
-            border-left: none
+            border-right: 1px solid $main-color

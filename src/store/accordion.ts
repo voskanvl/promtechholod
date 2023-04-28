@@ -9,29 +9,32 @@ export interface AccordionState {
     clear: () => void;
 }
 
-const accordionStore = createStore<AccordionState, [["zustand/devtools", never]]>(
-    devtools(
-        set => ({
-            current: undefined,
-            currentButton: null,
-            currentDetail: null,
-            set: (number, button, detail) =>
-                set(state => ({
-                    ...state,
-                    current: number,
-                    currentButton: button,
-                    currentDetail: detail,
-                })),
-            clear: () =>
-                set(state => ({
-                    ...state,
-                    current: undefined,
-                    currentButton: null,
-                    currentDetail: null,
-                })),
-        }),
-        { name: "accordion" },
-    ),
-);
+const accordionStoreCreator = (name: string) => {
+    return createStore<AccordionState, [["zustand/devtools", never]]>(
+        devtools(
+            set => ({
+                current: undefined,
+                currentButton: null,
+                currentDetail: null,
+                set: (number, button, detail) =>
+                    set(state => ({
+                        ...state,
+                        current: number,
+                        currentButton: button,
+                        currentDetail: detail,
+                    })),
+                clear: () =>
+                    set(state => ({
+                        ...state,
+                        current: undefined,
+                        currentButton: null,
+                        currentDetail: null,
+                    })),
+            }),
+            { name },
+        ),
+    );
+};
 
-export default accordionStore;
+export const accordionStore = accordionStoreCreator("accordion1");
+export const accordion2Store = accordionStoreCreator("accordion2");

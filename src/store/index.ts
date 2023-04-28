@@ -1,5 +1,1 @@
-import accordionStore from "./accordion";
-
-export default {
-    accordionStore,
-};
+export { accordionStore, accordion2Store } from "./accordion";
